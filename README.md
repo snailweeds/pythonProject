@@ -1,7 +1,9 @@
 # 3주 회고록
+* 가상환경과 패키지
 가상환경: 프로젝트별로 패키지들을 담을 공구함(격리된 실행환경)으로 공구함1에 A, B', C를 담아두고, 공구함2에 B, C, D, E를 담아 쓸 수 있음
 가상환경을 통해 재구성할 필요 없이 원하는 패키지를 담은 공구함을 따로 만들면 된다는 장점!
 File/PyCharm>Settings>Project>Python Interpreter>(+) or Add>Find Package and Install It!
+* 주의사항
 태그 안의 텍스트를 찍고 싶을 땐 → 태그.text
 태그 안의 속성을 찍고 싶을 땐 → 태그['속성']
 * 선택자를 사용하는 방법 (copy selector)
