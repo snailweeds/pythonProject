@@ -57,3 +57,25 @@ Insert: 한번 실행시킬 때마다 삽입되어 쌓임
 stplit: 문장을 쪼개어 리스트로 반환
 strip: 앞뒤의 공백 삭제
 ```
+* find와 select 차이점
+```
+find의 목적은 원하는 태그를 찾는 것
+태그 이름만 특정: soup.find('p')
+태그 속성만 특정: soup.find(class_='youngone'), soup.find(attrs = {'class':'youngone'})
+태그 이름과 속성 모두 특정: soup.find('p', class_='youngone')
+태그를 찾고 이를 tag 객체에 담아 반환한다. tag 객체는 태그의 요소를 자신의 속성으로 가짐
+태그의 이름: object_tag.name -> 'p'
+태그에 담긴 텍스트: object_tag.text -> ' Hello World! '
+태그의 속성과 속성값: object_tag.attrs -> {'class': ['youngone'], 'id': 'junu'}
+
+select는 CSS selector로 tag 객체를 찾아 반환하며 CSS에서 HTML을 태깅하는 방법을 활용한 메소드
+가장 첫 번째 결과를 반환하는 select_one()은 find()에, 전체 결과를 리스트로 반환하는 select()는 find_all()에 대응
+태그 이름만 특정: soup.select_one('p')
+태그 class 특정: soup.select_one('.youngone')
+태그 이름과 class 모두 특정: soup.select_one('p.youngone')
+태그 id 특정: soup.select_one('#junu')
+태그 이름과 id 모두 특정: soup.select_one('p#junu')
+태그 이름과 class, id 모두 특정: soup.select_one('p.youngone#junu')
+
+출처: https://desarraigado.tistory.com/14
+```
