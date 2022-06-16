@@ -48,7 +48,7 @@ db = client.dbsparta
 
 insert: db.db명.insert_one(준비해둔 dict)
 find: db.db명.find_one({'찾으려는 변수명' : 찾으려는 것과 일치하는 값})
-update: db.db명.update_one({'찾으려는 변수명' : 업데이트 하려는 것과 일치하는 값}, {'$set'{'업데이트 하려는 변수명' : 업데이트 값}})
+update: db.db명.update_one({'찾으려는 변수명' : 업데이트 하려는 것과 일치하는 값}, {'$set' : {'업데이트 하려는 변수명' : 업데이트 값}})
 delete: db.db명.delete_one({'삭제하려는 변수명' : 삭제하려는 값})
 ```
 * 주의사항
